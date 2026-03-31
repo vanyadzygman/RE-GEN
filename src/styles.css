@@ -1,0 +1,25 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background: #0e0e0e;
+    color: #f0ece4;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.header {
+    padding: 40px 60px;
+    align-items: center;
+    gap: 16px;
+}
+.header-logo {
+    color: #e8c97e;
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+.header-sub { 
+    color: #888;
+    font-size: 13px;
+    letter-spacing: .5px;
+}
