@@ -6,10 +6,12 @@ body {
     font-family: 'DM Sans', sans-serif;
 }
 
+/* Шапка */
 .header {
-    padding: 40px 60px;
+    padding: 40px 60px 32px;
     align-items: center;
     gap: 16px;
+    border-bottom: solid 1px #2a2a2a;
 }
 .header-logo {
     color: #e8c97e;
@@ -22,4 +24,30 @@ body {
     color: #888;
     font-size: 13px;
     letter-spacing: .5px;
+}
+
+/* Форма */
+.app {
+    display: grid;
+    grid-template-columns: 480px 1fr;
+}
+.form {
+    background: #181818;
+    border-right: 1px solid #2a2a2a;
+    padding: 40px 40px 700px;
+}
+.title {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    color: #e8c97e;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #2a2a2a;
+    padding-bottom: 10px;
+}
+
+.shablons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 32px;
 }
