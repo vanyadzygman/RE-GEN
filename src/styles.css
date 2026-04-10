@@ -45,9 +45,19 @@ body {
     padding-bottom: 10px;
 }
 
-.shablons {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    margin-top: 32px;
+.options {
+  display: grid;
+}
+
+.button {
+    background: #0e0e0e;
+    border: 2px solid #2a2a2a;
+    border-radius: 10px;
+    padding: 12px 8px 10px;
+    cursor: pointer;
+    text-align: center;
+    color: #888;
+    font-size: 11px;
+    font-family: 'Space Mono', monospace;
+    letter-spacing: .5px;
 }
