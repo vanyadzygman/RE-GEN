@@ -30,25 +30,39 @@ body {
 .app {
     display: grid;
     grid-template-columns: 480px 1fr;
+    min-height: calc(100vh - 89px);
 }
 .form {
     background: #181818;
     border-right: 1px solid #2a2a2a;
-    padding: 40px 40px 700px;
+    padding: 40px 40px 60px;
+    overflow-y: auto;
+    max-height: calc(100vh - 89px);
+    position: sticky;
+    top: 0;
 }
+
+/* Заголовок */
 .title {
     font-family: 'Space Mono', monospace;
     font-size: 11px;
     color: #e8c97e;
     letter-spacing: 2px;
-    border-bottom: 1px solid #2a2a2a;
+    margin-bottom: 20px;
+    margin-top: 36px;
     padding-bottom: 10px;
+    border-bottom: 1px solid #2a2a2a;
 }
+.title:first-child { margin-top: 0; }
 
 .options {
-  display: grid;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 4px;
 }
 
+/* Оформление кнопок */
 .button {
     background: #0e0e0e;
     border: 2px solid #2a2a2a;
@@ -60,4 +74,9 @@ body {
     font-size: 11px;
     font-family: 'Space Mono', monospace;
     letter-spacing: .5px;
+}
+.icon { 
+    font-size: 22px; 
+    display: block; 
+    margin-bottom: 6px; 
 }
