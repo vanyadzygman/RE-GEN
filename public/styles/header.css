@@ -1,0 +1,18 @@
+.header {
+    padding: 40px 60px 32px;
+    align-items: center;
+    gap: 16px;
+    border-bottom: solid 1px #2a2a2a;
+}
+.header-logo {
+    color: #e8c97e;
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+.header-sub { 
+    color: #888;
+    font-size: 13px;
+    letter-spacing: .5px;
+}
