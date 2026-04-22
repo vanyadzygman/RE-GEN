@@ -7,3 +7,9 @@ Coursework in the form of a resume generation site for the courses:
 - **name**: Ivan Dzygman
 - **e-mail**: vanyadzygman@gmail.com
 - **telegram**: @vanyadzygman
+
+## Program installation:
+```bash
+git clone https://github.com/vanyadzygman/RE-GEN.git
+cd RE-GEN
+```
