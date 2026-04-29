@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RE-GEN: Resume Generator</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/main.css">
-</head>
-<body>
-    <header class="header">
+import './styles/main.css'
+
+document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
+<header class="header">
         <div class="header-logo">RE·GEN</div>
         <div class="header-sub">Генератор резюме</div>
     </header>
@@ -75,7 +68,7 @@
 
         </aside>
     </div>
-    
-    <script type="module" src="../src/main.js"></script>
-</body>
-</html>
+
+<div class="ticks"></div>
+<section id="spacer"></section>
+`
