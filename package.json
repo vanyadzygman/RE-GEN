@@ -3,6 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "main": "src/main.ts",
+  "description": "Coursework in the form of a resume generation site",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -16,6 +17,7 @@
   "keywords": [],
   "author": {
     "name": "Ivan",
+    "group": "IM-51",
     "email": "vanyadzygman@gmail.com"
   },
   "devDependencies": {
