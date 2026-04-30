@@ -1,10 +1,20 @@
-import { getFormHTML } from './components/form';
 import { getHeaderHTML } from './components/header';
+import { getTemplateDesignHTML } from './components/form/section_template_design';
+import { getPersonalDataHTML } from './components/form/section_personal_data';
+import { getBiographyHTML } from './components/form/section_biography';
+import { getExperienceHTML } from './components/form/section_experience';
+import { getEducationHTML } from './components/form/section_education';
 import './styles/main.css'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     ${getHeaderHTML()}
     <div class="app">
-        ${getFormHTML()}
+        <aside class="form">
+            ${getTemplateDesignHTML()}
+            ${getPersonalDataHTML()}
+            ${getBiographyHTML()}
+            ${getExperienceHTML()}
+            ${getEducationHTML()}
+        </aside>
     </div>
 `
