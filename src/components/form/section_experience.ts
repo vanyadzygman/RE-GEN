@@ -1,5 +1,5 @@
 export function getExperienceHTML() {
     return `
-        <div class="title">ДОСВІД РОБОТИ</div>
+        <div class="section-title">ДОСВІД РОБОТИ</div>
     `;
 }

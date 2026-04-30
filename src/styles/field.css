@@ -1,0 +1,28 @@
+.field { margin-bottom: 16px; }
+.field label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #888;
+  margin-bottom: 6px;
+  letter-spacing: .4px;
+}
+.field input, .field textarea, .field select {
+  width: 100%;
+  background: #0e0e0e;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  color: #ccc;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  padding: 10px 14px;
+  transition: border-color .2s;
+  outline: none;
+  resize: vertical;
+}
+.field input:focus, .field textarea:focus, .field select:focus {
+  border-color: #e8c97e;
+}
+.field textarea { min-height: 80px; }
+
+.field-group { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
