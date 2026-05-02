@@ -4,7 +4,7 @@ import { getPersonalDataHTML } from './components/form/section_personal_data';
 import { getBiographyHTML } from './components/form/section_biography';
 import { getExperienceHTML } from './components/form/section_experience';
 import { getEducationHTML } from './components/form/section_education';
-import { getReviewHTML } from './components/main/review';
+import { getReviewHTML } from './components/main/preview';
 import './styles/main.scss'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
@@ -17,7 +17,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
             ${getExperienceHTML()}
             ${getEducationHTML()}
         </aside>
-        <main>
+        <main class="preview-panel">
             ${getReviewHTML()}
         </main>
     </div>
