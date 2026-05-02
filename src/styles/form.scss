@@ -46,6 +46,16 @@
     font-family: 'Space Mono', monospace;
     letter-spacing: .5px;
 }
+.button:hover {
+    background-color: #0e0e0e;
+    border: 2px solid #e8c97e;
+    color: #e8c97e;
+}
+.button.active {
+    background: rgba(232,201,126,.08);
+    border: 2px solid #e8c97e;
+    color: #181818;
+}
 .icon { 
     font-size: 22px; 
     display: block; 

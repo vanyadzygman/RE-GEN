@@ -2,7 +2,7 @@ export function getTemplateDesignHTML() {
     return `
         <div class="section-title">ШАБЛОН ОФОРМЛЕННЯ</div>
             <div class="options">
-                <button class="button">
+                <button class="button active">
                     <span class="icon">📄</span>
                     CLASSIC                    
                 </button>
