@@ -66,4 +66,11 @@ export function initBlocks() {
     `;
     document.getElementById('education-list')!.insertAdjacentHTML('beforeend', block);
     });
+
+    document.addEventListener('click', (e) => {
+    const target = e.target as HTMLElement;
+    if (target.classList.contains('block-delete')) {
+        target.closest('.block')?.remove();
+    }
+});
 }
