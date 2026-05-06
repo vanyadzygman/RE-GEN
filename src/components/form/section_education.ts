@@ -27,6 +27,6 @@ export function getEducationHTML() {
             </div>
         </div>
     </div>
-    <button class="btn-generate" id="add-education">+ Додати освіту</button>
+    <button class="btn-add" id="add-education">+ Додати освіту</button>
   `;    
 }

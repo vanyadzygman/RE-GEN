@@ -27,6 +27,6 @@ export function getExperienceHTML() {
             </div>
         </div>
     </div>
-    <button class="btn-generate" id="add-experience">+ Додати місце роботи</button>
+    <button class="btn-add" id="add-experience">+ Додати місце роботи</button>
   `;    
 } 

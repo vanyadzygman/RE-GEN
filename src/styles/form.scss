@@ -60,7 +60,7 @@
     margin-bottom: 6px; 
 }
 
-.btn-generate {
+.btn-add {
     width: 100%;
     margin-top:8px;
     margin-bottom: 36px;
@@ -77,4 +77,22 @@
     cursor: pointer;
     transition: opacity .2s, transform .1s;
 }
-.btn-generate:hover {transform: translateY(-1px); }
+.btn-add:hover {transform: translateY(-1px); }
+
+.btn-generate {
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 36px;
+    padding: 16px;
+    background: #e8c97e;
+    border: none;
+    border-radius: 10px;
+    color: #0e0e0e;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    cursor: pointer;
+    transition: opacity .2s, transform .1s;
+}
+.btn-generate:hover { transform: translateY(-1px); }

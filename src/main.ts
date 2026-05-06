@@ -4,6 +4,7 @@ import { getPersonalDataHTML } from './components/form/section_personal_data';
 import { getBiographyHTML } from './components/form/section_biography';
 import { getExperienceHTML } from './components/form/section_experience';
 import { getEducationHTML } from './components/form/section_education';
+import { getGenerateButtonHTML } from './components/form/generate_button';
 import { getReviewHTML } from './components/main/preview';
 import { initBlocks } from './core/block';
 import './styles/main.scss'
@@ -17,6 +18,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
             ${getBiographyHTML()}
             ${getExperienceHTML()}
             ${getEducationHTML()}
+            ${getGenerateButtonHTML()}
         </aside>
         <main class="preview-panel">
             ${getReviewHTML()}
