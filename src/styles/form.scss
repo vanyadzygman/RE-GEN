@@ -13,7 +13,6 @@
     top: 0;
 }
 
-/*Заголовок*/
 .section-title {
     font-family: 'Space Mono', monospace;
     font-size: 11px;
@@ -33,7 +32,6 @@
     margin-top: 4px;
 }
 
-/*Кнопки*/
 .tpl-btn {
     background: #0e0e0e;
     border: 2px solid #2a2a2a;
@@ -61,3 +59,22 @@
     display: block; 
     margin-bottom: 6px; 
 }
+
+.btn-generate {
+    width: 100%;
+    margin-top:8px;
+    margin-bottom: 36px;
+    padding: 16px;
+    background:#1e1e1e; 
+    border:1px solid #2a2a2a;
+    border-radius: 10px;
+    color: #0e0e0e;
+    font-family: 'DM Sans', sans-serif;
+    color: #e8c97e;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    cursor: pointer;
+    transition: opacity .2s, transform .1s;
+}
+.btn-generate:hover {transform: translateY(-1px); }
