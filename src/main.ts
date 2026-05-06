@@ -5,6 +5,7 @@ import { getBiographyHTML } from './components/form/section_biography';
 import { getExperienceHTML } from './components/form/section_experience';
 import { getEducationHTML } from './components/form/section_education';
 import { getReviewHTML } from './components/main/preview';
+import { initBlocks } from './core/block';
 import './styles/main.scss'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
@@ -22,3 +23,4 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
         </main>
     </div>
 `
+initBlocks();
