@@ -20,7 +20,13 @@ Laboratory documentation
 
 ### Laboratory work 6
 
-### Laboratory work 7
+### Laboratory work 7 - Reactive Communication with EventEmitter
+**File:** `src/core/eventEmitter.ts`
+
+**Usage:**
+- A custom EventEmitter connects the form and the preview panel
+- When the user clicks "Generate", the button emits a `resume:generate` event with form data
+- The preview panel listens to this event and renders the resume template with the provided data
 
 ### Laboratory work 8
 
