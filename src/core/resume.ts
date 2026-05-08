@@ -4,6 +4,26 @@ import { log } from './logger';
 
 const loggedTemplate = log(getClassicTemplate, 'getClassicTemplate');
 
+function getExperience() {
+    const blocks = document.querySelectorAll('#experience-list .block');
+    return Array.from(blocks).map(block => ({
+        position: block.querySelector<HTMLInputElement>('[placeholder="Frontend Developer"]')?.value || '',
+        company: block.querySelector<HTMLInputElement>('[placeholder="Google"]')?.value || '',
+        start: block.querySelector<HTMLInputElement>('[placeholder="1999"]')?.value || '',
+        end: block.querySelector<HTMLInputElement>('[placeholder="2026"]')?.value || '',
+    }));
+}
+
+function getEducation() {
+    const blocks = document.querySelectorAll('#education-list .block');
+    return Array.from(blocks).map(block => ({
+        degree: block.querySelector<HTMLInputElement>('[placeholder="Бакалавр"]')?.value || '',
+        school: block.querySelector<HTMLInputElement>('[placeholder="КПІ ім. Ігоря Сікорського"]')?.value || '',
+        start: block.querySelector<HTMLInputElement>('[placeholder="1999"]')?.value || '',
+        end: block.querySelector<HTMLInputElement>('[placeholder="2026"]')?.value || '',
+    }));
+}
+
 export function initResume() {
     emitter.on('resume:generate', (data: any) => {
         const preview = document.querySelector('.preview-panel');
@@ -21,6 +41,8 @@ export function initResume() {
             city: document.querySelector<HTMLInputElement>('[placeholder="Київ"]')?.value || '',
             github: document.querySelector<HTMLInputElement>('[placeholder="https://github.com/example"]')?.value || '',
             bio: document.querySelector<HTMLTextAreaElement>('[placeholder="Досвідчений розробник з 3+ роками практики у створенні сучасних веб-застосунків..."]')?.value || '',
+            experience: getExperience(),
+            education: getEducation(),
         });
     });
 }
