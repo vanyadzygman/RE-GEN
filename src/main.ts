@@ -6,9 +6,10 @@ import { getExperienceHTML } from './components/form/section_experience';
 import { getEducationHTML } from './components/form/section_education';
 import { getGenerateButtonHTML } from './components/form/generate_button';
 import { getReviewHTML } from './components/main/preview';
+import './styles/main.scss'
+// логіка
 import { initBlocks } from './core/block';
 import { initResume } from './core/resume';
-import './styles/main.scss'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     ${getHeaderHTML()}

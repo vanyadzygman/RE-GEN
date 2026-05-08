@@ -1,11 +1,14 @@
 import { emitter } from './eventEmitter';
 import { getClassicTemplate } from '../components//templates/classic';
+import { log } from './logger';
+
+const loggedTemplate = log(getClassicTemplate, 'getClassicTemplate');
 
 export function initResume() {
     emitter.on('resume:generate', (data: any) => {
         const preview = document.querySelector('.preview-panel');
         if (preview) {
-            preview.innerHTML = getClassicTemplate(data);
+            preview.innerHTML = loggedTemplate(data);
         }
     });
 
