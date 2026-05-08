@@ -1,8 +1,10 @@
 import { emitter } from './eventEmitter';
 import { getClassicTemplate } from '../components//templates/classic';
 import { log } from './logger';
+import { memoize } from './memoize';
 
 const loggedTemplate = log(getClassicTemplate, 'getClassicTemplate');
+const memoizedTemplate = memoize(loggedTemplate);
 
 function getExperience() {
     const blocks = document.querySelectorAll('#experience-list .block');
@@ -28,7 +30,7 @@ export function initResume() {
     emitter.on('resume:generate', (data: any) => {
         const preview = document.querySelector('.preview-panel');
         if (preview) {
-            preview.innerHTML = loggedTemplate(data);
+            preview.innerHTML = memoizedTemplate(data);
         }
     });
 
