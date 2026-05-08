@@ -30,4 +30,10 @@ Laboratory documentation
 
 ### Laboratory work 8
 
-### Laboratory work 9
+### Laboratory work 9 — Logging Decorator
+**File:** `src/core/logger.ts`
+
+**Usage:**
+- A `log` decorator wraps the `getClassicTemplate` function
+- Each time the user clicks "Generate", the logger records the function name, arguments, and execution time to the console
+- If an error occurs during generation, the logger catches and displays it
