@@ -8,8 +8,7 @@ import { getGenerateButtonHTML } from './components/form/generate_button';
 import { getReviewHTML } from './components/main/preview';
 import './styles/main.scss'
 // логіка
-import { initBlocks } from './core/block';
-import { initResume } from './core/resume';
+import { initBlocks, initResume } from 'core';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     ${getHeaderHTML()}

@@ -20,6 +20,9 @@
     "group": "IM-51",
     "email": "vanyadzygman@gmail.com"
   },
+  "dependencies": {
+    "core": "file:./src/core"
+  },
   "devDependencies": {
     "sass": "^1.99.0",
     "sass-embedded": "^1.99.0",
