@@ -10,7 +10,13 @@ Laboratory documentation
 - Each time the user adds a new work experience or education block, the generator produces a unique ID for that block (`block-1`, `block-2`, etc.)
 - This ID is used to identify and manage dynamic blocks on the page
   
-### Laboratory work 2
+### Laboratory work 2 — Library and Modules
+**File:** `src/core/package.json`, `src/core/index.ts`
+
+**Usage:**
+- The `src/core` folder is structured as a separate local package `core`
+- It is connected to the main project via `package.json` as a local dependency: `"core": "file:./src/core"`
+- `index.ts` exports only the functions needed by `main.ts`
 
 ### Laboratory work 3
 
