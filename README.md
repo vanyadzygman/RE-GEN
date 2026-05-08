@@ -17,10 +17,6 @@ RE-GEN/
 │   │   ├── main/            ← header, preview
 │   │   └── templates/       ← resume templates
 │   ├── core/                ← core logic modules
-│   │   ├── eventEmitter.ts
-│   │   ├── generator.ts
-│   │   ├── block.ts
-│   │   └── resume.ts
 │   ├── styles/              ← scss styles
 │   └── main.ts              ← entry point
 └── docs/                    ← documentation
