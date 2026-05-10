@@ -3,6 +3,7 @@ import { getClassicTemplate } from '../components//templates/classic';
 import { log } from './logger';
 import { memoize } from './memoize';
 import { PriorityQueue } from './queue'
+import { findCallback } from './asyncFind';
 
 
 const loggedTemplate = log(getClassicTemplate, 'getClassicTemplate');
@@ -50,16 +51,29 @@ export function initResume() {
     });
 
     document.querySelector('.btn-generate')?.addEventListener('click', () => {
-        emitter.emit('resume:generate', {
-            name: document.querySelector<HTMLInputElement>('[placeholder="Тарас Григорович Шевченко"]')?.value || '',
-            position: document.querySelector<HTMLInputElement>('[placeholder="Frontend Developer"]')?.value || '',
-            email: document.querySelector<HTMLInputElement>('[placeholder="you@example.com"]')?.value || '',
-            phone: document.querySelector<HTMLInputElement>('[placeholder="+38 000 000 00 00"]')?.value || '',
-            city: document.querySelector<HTMLInputElement>('[placeholder="Київ"]')?.value || '',
-            github: document.querySelector<HTMLInputElement>('[placeholder="https://github.com/example"]')?.value || '',
-            bio: document.querySelector<HTMLTextAreaElement>('[placeholder="Досвідчений розробник з 3+ роками практики у створенні сучасних веб-застосунків..."]')?.value || '',
-            experience: getExperience(),
-            education: getEducation(),
+        const requiredFields = [
+            'Тарас Григорович Шевченко',
+            'Frontend Developer',
+            'you@example.com',
+            '+38 000 000 00 00',
+            'Київ',
+        ];
+        findCallback(requiredFields, (emptyField) => {
+            if (emptyField) {
+                window.alert(`Заповніть поле: ${emptyField}`);
+                return
+            }
+            emitter.emit('resume:generate', {
+                name: document.querySelector<HTMLInputElement>('[placeholder="Тарас Григорович Шевченко"]')?.value || '',
+                position: document.querySelector<HTMLInputElement>('[placeholder="Frontend Developer"]')?.value || '',
+                email: document.querySelector<HTMLInputElement>('[placeholder="you@example.com"]')?.value || '',
+                phone: document.querySelector<HTMLInputElement>('[placeholder="+38 000 000 00 00"]')?.value || '',
+                city: document.querySelector<HTMLInputElement>('[placeholder="Київ"]')?.value || '',
+                github: document.querySelector<HTMLInputElement>('[placeholder="https://github.com/example"]')?.value || '',
+                bio: document.querySelector<HTMLTextAreaElement>('[placeholder="Досвідчений розробник з 3+ роками практики у створенні сучасних веб-застосунків..."]')?.value || '',
+                experience: getExperience(),
+                education: getEducation(),
+            })
         });
     });
 }
