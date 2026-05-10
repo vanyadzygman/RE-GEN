@@ -18,7 +18,13 @@ Laboratory documentation
 - It is connected to the main project via `package.json` as a local dependency: `"core": "file:./src/core"`
 - `index.ts` exports only the functions needed by `main.ts`
 
-### Laboratory work 3
+### Laboratory work 3 — Memoization Function
+**File:** `src/core/memoize.ts`
+
+**Usage:**
+- The `memoize` function wraps the resume generation function
+- When the user clicks "Generate" with the same form data, the result is returned from cache instead of rebuilding the HTML
+- Cache key is built from the function arguments using `JSON.stringify`
 
 ### Laboratory work 4
 
