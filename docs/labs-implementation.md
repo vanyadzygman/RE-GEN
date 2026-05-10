@@ -26,9 +26,22 @@ Laboratory documentation
 - When the user clicks "Generate" with the same form data, the result is returned from cache instead of rebuilding the HTML
 - Cache key is built from the function arguments using `JSON.stringify`
 
-### Laboratory work 4
+### Laboratory work 4 — Bi-Directional Priority Queue
+**File:** `src/core/queue.ts`
 
-### Laboratory work 5
+**Usage:**
+- A `PriorityQueue` class manages the order of resume sections
+- Each section is added with a priority: personal data (1), experience (2), education (3), biography (4)
+- Sections are dequeued from highest to lowest priority and logged to the console before rendering
+
+### Laboratory work 5 — Async Array Functions
+**File:** `src/core/asyncFind.ts`
+
+**Usage:**
+- A `findCallback` function validates the form before resume generation
+- It iterates through required fields and finds the first empty one
+- If an empty field is found — an alert is shown and generation is cancelled
+- If all fields are filled — resume generation proceeds
 
 ### Laboratory work 6
 
