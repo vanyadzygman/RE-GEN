@@ -2,6 +2,8 @@ import { emitter } from './eventEmitter';
 import { getClassicTemplate } from '../components//templates/classic';
 import { log } from './logger';
 import { memoize } from './memoize';
+import { PriorityQueue } from './queue'
+
 
 const loggedTemplate = log(getClassicTemplate, 'getClassicTemplate');
 const memoizedTemplate = memoize(loggedTemplate);
@@ -30,6 +32,19 @@ export function initResume() {
     emitter.on('resume:generate', (data: any) => {
         const preview = document.querySelector('.preview-panel');
         if (preview) {
+            const queue = new PriorityQueue();
+            queue.enqueue('personal', 1, '');
+            queue.enqueue('experience', 2, '');
+            queue.enqueue('education', 3, '');
+            queue.enqueue('bio', 4, '');
+
+            const order: string[] = [];
+            while (queue.items.length) {
+                const section = queue.dequeue();
+                if (section) order.push(section.section);
+            }
+
+            console.log('секції в порядку пріоритету:', order);
             preview.innerHTML = memoizedTemplate(data);
         }
     });
