@@ -4,6 +4,7 @@ import { log } from './logger';
 import { memoize } from './memoize';
 import { PriorityQueue } from './queue'
 import { findCallback } from './asyncFind';
+import { createFormProxy } from './formProxy';
 
 
 const loggedTemplate = log(getClassicTemplate, 'getClassicTemplate');
@@ -33,6 +34,8 @@ export function initResume() {
     emitter.on('resume:generate', (data: any) => {
         const preview = document.querySelector('.preview-panel');
         if (preview) {
+            const proxiedData = createFormProxy(data);
+
             const queue = new PriorityQueue();
             queue.enqueue('personal', 1, '');
             queue.enqueue('experience', 2, '');
@@ -46,7 +49,7 @@ export function initResume() {
             }
 
             console.log('секції в порядку пріоритету:', order);
-            preview.innerHTML = memoizedTemplate(data);
+            preview.innerHTML = memoizedTemplate(proxiedData);
         }
     });
 
