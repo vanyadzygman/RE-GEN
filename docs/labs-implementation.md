@@ -53,7 +53,14 @@ Laboratory documentation
 - When the user clicks "Generate", the button emits a `resume:generate` event with form data
 - The preview panel listens to this event and renders the resume template with the provided data
 
-### Laboratory work 8
+### Laboratory work 8 — Authentication Proxy
+
+**File:** `src/core/formProxy.ts`
+
+**Usage:**
+- A `Proxy` intercepts access to resume form data
+- Each time the template reads a field (name, position, email, etc.), the proxy logs it to the console
+- This allows tracking which fields are accessed during resume generation
 
 ### Laboratory work 9 — Logging Decorator
 **File:** `src/core/logger.ts`
